@@ -7,7 +7,7 @@ function onReady(){
     $( document ).on( 'click', '#multiplicationBtn', onMultiplication );
     $( document ).on( 'click', '#divisionBtn', onDivision );
     $( document ).on( 'click', '#equalsBtn', onEquals );
-    //$( document ).on( 'click', '#clearBtn', onClear );
+    $( document ).on( 'click', '#clearBtn', onClear );
 } // end onReady
 
 //-------------------------------------------------------------
@@ -25,7 +25,13 @@ function onMultiplication(){
 function onDivision(){
     operator = '/'
 } // end onDivision
-
+function onClear(){
+    objectToSend = {
+        inputOne: $( '#firstInput' ).val( '' ),
+        operator: '',
+        inputTwo: $( '#secondInput' ).val( '' )
+    } // end objectToSend
+} // end onClear
 //-------------------------------------------------------------
 
 function refreshMath(){
@@ -66,7 +72,7 @@ function onEquals(){
         inputOne: $( '#firstInput' ).val(),
         operator: operator,
         inputTwo: $( '#secondInput' ).val()
-    } // end newMath
+    } // end objectToSend
     $.ajax( {
         url: '/mathematics',
         method: 'POST',
