@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 8 - Weekend Assignment</title>
+
+    <script src="vendors/jquery.js"></script>
+    <script src="scripts/client.js"></script>
 </head>
 <body>
     <h1>Server Side Calculator</h1>
     <input type="number" id="firstInput" />
-
+    
     <button id="additionBtn">+</button>
     <button id="subtractionBtn">-</button>
-    <button id="multiplicationBtm">*</button>
+    <button id="multiplicationBtn">*</button>
     <button id="divisionBtn">/</button>
 
     <input type="number" id="secondInput" />
@@ -19,10 +22,27 @@
     <button id="equalsBtn">=</button>
     <button id="clearBtn">C</button>
 
-    <h1><span id="answerOut"></span></h1>
+    <div id="answerOut">
+
+    </div>
 
     <ul class="listOut">
 
     </ul>
 </body>
 </html>
+
+<!--
+    /*function delOnClick() {
+  $.ajax({
+    url: ‘/calculator’,
+    type: ‘DELETE’,
+    data: { firstNumber: 
+            mathOperator: 
+            secondNumber: 
+            solution:  }, //<-----this should have to be an object.
+    contentType: ‘application/json’, // <---add this
+    dataType: ‘text’, // <---update this
+  });
+}*/
+--> 
