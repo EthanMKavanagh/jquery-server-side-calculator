@@ -27,7 +27,7 @@ function onDivision(){
 } // end onDivision
 
 //-------------------------------------------------------------
-/*
+
 function refreshMath(){
     $.ajax( {
         url: '/mathematics',
@@ -60,7 +60,7 @@ function refreshMath(){
 } // refreshMath
 
 //-------------------------------------------------------------
-
+/*
 function onEquals(){
     let objectToSend = {
         inputOne: $( '#firstInput' ).val(),
