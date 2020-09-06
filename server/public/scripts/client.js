@@ -12,6 +12,7 @@ function onReady(){
 
 //-------------------------------------------------------------
 
+// operator functions, sets operator to a specific value depending on which button is clicked
 let operator;
 function onAddition(){
     operator = '+'
@@ -32,8 +33,10 @@ function onClear(){
         inputTwo: $( '#secondInput' ).val( '' )
     } // end objectToSend
 } // end onClear
+
 //-------------------------------------------------------------
 
+// ajax GET
 function refreshMath(){
     $.ajax( {
         url: '/mathematics',
@@ -43,6 +46,7 @@ function refreshMath(){
         let el = $( '#answerOut' );
         let element = $( '.listOut' );
         element.empty();
+        // append list items and answer
         for( let i = 0; i < response.length; i++ ){
             $( '.listOut' ).append( `
                 <li>
@@ -68,6 +72,7 @@ function refreshMath(){
 //-------------------------------------------------------------
 
 function onEquals(){
+    // object
     let objectToSend = {
         inputOne: $( '#firstInput' ).val(),
         operator: operator,
@@ -79,6 +84,7 @@ function onEquals(){
         data: objectToSend
     } ).then( function( response ) {
         console.log( 'Created a math problem:', response );
+        // call refreshMath to keep the DOM up to date
         refreshMath();
     } ).catch( function( errorInfo ){
         alert( 'Error in ajax POST', errorInfo );
