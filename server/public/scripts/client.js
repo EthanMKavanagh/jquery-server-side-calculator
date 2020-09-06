@@ -60,7 +60,7 @@ function refreshMath(){
 } // refreshMath
 
 //-------------------------------------------------------------
-/*
+
 function onEquals(){
     let objectToSend = {
         inputOne: $( '#firstInput' ).val(),
@@ -78,4 +78,3 @@ function onEquals(){
         alert( 'Error in ajax POST', errorInfo );
     } ); // end AJAX
 } // end onEquals
-*/
