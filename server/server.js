@@ -5,7 +5,7 @@ const PORT = 3000;
 
 app.use( express.static( 'server/public' ) );
 app.use( bodyParser.urlencoded( { extended: true } ) );
-/*
+
 let math = [];
 
 //-------------------------------------------------------------
@@ -18,7 +18,7 @@ app.get( '/mathematics', ( req, res ) => {
 } ); // end GET
 
 //-------------------------------------------------------------
-
+/*
 // POST
 app.post( '/mathematics', ( req, res ) => {
     let objectToSend = req.body;
@@ -56,9 +56,8 @@ app.post( '/mathematics', ( req, res ) => {
 } ); // end POST
 
 //-------------------------------------------------------------
-
+*/
 // listen
 app.listen( PORT, () => {
     console.log( 'Node listening at port:', PORT );
 } ); // end listen
-*/
