@@ -26,6 +26,14 @@ app.get( '/mathematics', ( req, res ) => {
 app.post( '/mathematics', ( req, res ) => {
     // declaring req.body to a different variable
     let objectToSend = req.body;
+
+/* Work in progress!
+    // making sure inputs aren't empty
+    if( objectToSend.inputOne === '' || objectToSend.operator === '' || objectToSend.inputTwo === '' ){
+        res.sendStatus( 401 );
+    } // end if
+*/
+
     // pushing variable into calculations function
     calculations( objectToSend );
 
