@@ -27,10 +27,12 @@ app.post( '/mathematics', ( req, res ) => {
     // declaring req.body to a different variable
     let objectToSend = req.body;
 
-/* Work in progress!
+/*  Work in progress!
     // making sure inputs aren't empty
     if( objectToSend.inputOne === '' || objectToSend.operator === '' || objectToSend.inputTwo === '' ){
-        res.sendStatus( 401 );
+        // What status code do I send?
+        // How do I not send the object through calculations()?
+        res.sendStatus( 405 );
     } // end if
 */
 
